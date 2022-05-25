@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ToDo App</title>
+    </head>
+
+    <body>
+
+        <input  type="text" id="todoText"/> <button id="addButton" >Add</button>
+
+
+        <script>
+            function addTodo() {
+                const text = document.getElementById("todoText").value
+                console.log(text)
+                if (!text) {
+                    return
+                }
+                fetch("/add", {
+                    method: "POST",
+                    body: text,
+                }).then((data) => {
+                    data.json()
+                        .then(console.log)
+                })
+            }
+
+
+            document.getElementById("addButton").addEventListener("click", addTodo)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "To do app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch . -e js,html ./index.js"
+  },
+  "author": "Akila",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
